@@ -11,4 +11,5 @@ class Type extends Model
 
     public $timestamps = false;
     protected $primaryKey = 'type_ref';
+    public $incrementing = false;
 }
