@@ -3,6 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
 
-Route::group(['prefix' => '/admin'], function () {
+Route::group(['prefix' => '/'], function () {
     Voyager::routes();
 });
