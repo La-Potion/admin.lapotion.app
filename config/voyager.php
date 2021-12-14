@@ -104,13 +104,13 @@ return [
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'fr',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
-            'en',
+            'fr',
             //'pt',
         ],
     ],
@@ -181,7 +181,7 @@ return [
     |
     */
 
-    'primary_color' => '#22A7F0',
+    'primary_color' => '#242E46',
 
     'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
 
