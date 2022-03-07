@@ -15,6 +15,7 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('card_id')->unsigned();
             $table->boolean('liked');
             $table->timestamps();
         });
