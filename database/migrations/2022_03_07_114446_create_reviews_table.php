@@ -15,9 +15,10 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('card_id')->unsigned();
+            $table->bigInteger('carte_id')->unsigned();
             $table->boolean('liked');
             $table->timestamps();
+            $table->foreign('carte_id')->references('id')->on('cartes');
         });
     }
 
