@@ -23,10 +23,12 @@ class CreateCartesTable extends Migration
             $table->integer('joueurs')->default(0);
             $table->char('type_ref', 2)->index();
             $table->bigInteger('duree_id')->unsigned();
+            $table->bigInteger('special_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('type_ref')->references('type_ref')->on('types');
             $table->foreign('duree_id')->references('id')->on('durees');
+            $table->foreign('special_id')->references('id')->on('specials');
         });
     }
 
