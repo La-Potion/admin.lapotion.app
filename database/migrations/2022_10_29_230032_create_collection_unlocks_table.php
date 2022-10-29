@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Special extends Migration
+class CreateCollectionUnlocksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class Special extends Migration
      */
     public function up()
     {
-        Schema::create('specials', function (Blueprint $table) {
+        Schema::create('collection_unlocks', function (Blueprint $table) {
             $table->id();
-            $table->name('name');
+            $table->foreignIdFor(\App\Models\User::class);
+            $table->foreignIdFor(\App\Models\Collection::class);
+            $table->timestamps();
+
         });
     }
 
@@ -26,6 +29,6 @@ class Special extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('collection_unlocks');
     }
 }
