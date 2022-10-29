@@ -22,9 +22,9 @@ class CreateCartesTable extends Migration
             $table->text('question_bis')->nullable();
             $table->integer('joueurs')->default(0);
             $table->char('type_ref', 2)->index();
-            $table->bigInteger('duree_id')->unsigned();
-            $table->bigInteger('special_id')->unsigned();
-            $table->bigInteger('collection_id')->unsigned();
+            $table->bigInteger('duree_id')->unsigned()->nullable();
+            $table->bigInteger('special_id')->unsigned()->nullable();
+            $table->bigInteger('collection_id')->unsigned()->nullable();
             $table->timestamps();
 
             $table->foreign('type_ref')->references('type_ref')->on('types');
